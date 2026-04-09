@@ -110,6 +110,7 @@ class Choice(models.Model):
 class Submission(models.Model):
     enrollment = models.ForeignKey(Enrollment, on_delete=models.CASCADE)
     choices = models.ManyToManyField(Choice)
+    id = 1 ## placeholder
 
 # method to calculate if the learner gets the score of the question
     def is_get_score(self, selected_ids):
